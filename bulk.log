@@ -1,0 +1,59 @@
+2021-02-23 14:02:17.218  INFO 89232 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Starting BulkInsertApplication using Java 1.8.0_241 on DESKTOP-OQP4CS3 with PID 89232 (C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\target\classes started by HaikalHafizKadar in C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert)
+2021-02-23 14:02:17.228  INFO 89232 --- [main] c.demo.BulkInsert.BulkInsertApplication  : No active profile set, falling back to default profiles: default
+2021-02-23 14:02:18.602  INFO 89232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2021-02-23 14:02:18.608  INFO 89232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-23 14:02:18.620  INFO 89232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-02-23 14:02:18.735  INFO 89232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-23 14:02:18.735  INFO 89232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
+2021-02-23 14:02:19.852  INFO 89232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-23 14:02:19.992  INFO 89232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2021-02-23 14:02:20.001  INFO 89232 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Started BulkInsertApplication in 3.24 seconds (JVM running for 3.875)
+2021-02-23 14:02:51.047  INFO 89232 --- [http-nio-8091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-23 14:02:51.047  INFO 89232 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-23 14:02:51.049  INFO 89232 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-23 14:02:51.088  INFO 89232 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : pathC:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\testformat1.csv
+2021-02-23 14:02:51.090  INFO 89232 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : fileExecute C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\testformat1.csvtestformat1.csv
+2021-02-23 14:02:51.093  INFO 89232 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : Error processing file C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\testformat1.csvtestformat1.csv (The system cannot find the file specified)
+2021-02-23 14:07:24.782  INFO 65948 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Starting BulkInsertApplication using Java 1.8.0_241 on DESKTOP-OQP4CS3 with PID 65948 (C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\target\classes started by HaikalHafizKadar in C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert)
+2021-02-23 14:07:24.784  INFO 65948 --- [main] c.demo.BulkInsert.BulkInsertApplication  : No active profile set, falling back to default profiles: default
+2021-02-23 14:07:26.189  INFO 65948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2021-02-23 14:07:26.201  INFO 65948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-23 14:07:26.202  INFO 65948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-02-23 14:07:26.379  INFO 65948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-23 14:07:26.379  INFO 65948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1550 ms
+2021-02-23 14:07:27.311  INFO 65948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-23 14:07:27.463  INFO 65948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2021-02-23 14:07:27.472  INFO 65948 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Started BulkInsertApplication in 3.094 seconds (JVM running for 3.525)
+2021-02-23 14:07:37.226  INFO 65948 --- [http-nio-8091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-23 14:07:37.227  INFO 65948 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-23 14:07:37.228  INFO 65948 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-23 14:07:37.253  INFO 65948 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : pathtestformat1.csv
+2021-02-23 14:07:37.253  INFO 65948 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : fileExecute testformat1.csvtestformat1.csv
+2021-02-23 14:07:37.256  INFO 65948 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : Error processing file testformat1.csvtestformat1.csv (The system cannot find the file specified)
+2021-02-23 14:16:56.793  INFO 55936 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Starting BulkInsertApplication using Java 1.8.0_241 on DESKTOP-OQP4CS3 with PID 55936 (C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\target\classes started by HaikalHafizKadar in C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert)
+2021-02-23 14:16:56.797  INFO 55936 --- [main] c.demo.BulkInsert.BulkInsertApplication  : No active profile set, falling back to default profiles: default
+2021-02-23 14:16:58.238  INFO 55936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2021-02-23 14:16:58.250  INFO 55936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-23 14:16:58.254  INFO 55936 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-02-23 14:16:58.400  INFO 55936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-23 14:16:58.400  INFO 55936 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1553 ms
+2021-02-23 14:16:59.496  INFO 55936 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-23 14:16:59.654  INFO 55936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2021-02-23 14:16:59.663  INFO 55936 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Started BulkInsertApplication in 3.332 seconds (JVM running for 3.867)
+2021-02-23 15:11:56.360  INFO 91652 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Starting BulkInsertApplication using Java 1.8.0_241 on DESKTOP-OQP4CS3 with PID 91652 (C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\target\classes started by HaikalHafizKadar in C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert)
+2021-02-23 15:11:56.362  INFO 91652 --- [main] c.demo.BulkInsert.BulkInsertApplication  : No active profile set, falling back to default profiles: default
+2021-02-23 15:11:57.667  INFO 91652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2021-02-23 15:11:57.672  INFO 91652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-23 15:11:57.679  INFO 91652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-02-23 15:11:57.871  INFO 91652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-23 15:11:57.871  INFO 91652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1469 ms
+2021-02-23 15:11:58.891  INFO 91652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-23 15:11:59.043  INFO 91652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2021-02-23 15:11:59.052  INFO 91652 --- [main] c.demo.BulkInsert.BulkInsertApplication  : Started BulkInsertApplication in 3.188 seconds (JVM running for 3.837)
+2021-02-23 15:14:57.263  INFO 91652 --- [http-nio-8091-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-23 15:14:57.264  INFO 91652 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-23 15:14:57.265  INFO 91652 --- [http-nio-8091-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-23 15:14:57.295  INFO 91652 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : fileExecute C:\Users\HaikalHafizKadar\Desktop\BulkInsert\BulkInsert\temp\testformat1.csv
+2021-02-23 15:14:57.311  INFO 91652 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : while loop count 0
+2021-02-23 15:14:57.312  INFO 91652 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : while loop count 1
+2021-02-23 15:14:58.497  INFO 91652 --- [http-nio-8091-exec-1] c.d.BulkInsert.Service.csvBulkInsertion  : Error processing file Timeout connecting to [/9.212.151.80:9200]
