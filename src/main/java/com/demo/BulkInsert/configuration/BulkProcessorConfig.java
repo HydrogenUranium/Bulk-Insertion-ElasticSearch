@@ -1,4 +1,4 @@
-package com.demo.BulkInsert.Configuration;
+package com.demo.BulkInsert.configuration;
 
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.bulk.BulkProcessor;
@@ -19,9 +19,8 @@ public class BulkProcessorConfig {
     RestHighLevelClient client;
 
     @Bean
-    public BulkProcessor bulkProcessor () {
-        BulkProcessor bulkProcessor;
-        return bulkProcessor = BulkProcessor.builder((request, bulkListener) -> client.bulkAsync(request, RequestOptions.DEFAULT, bulkListener), new BulkProcessor.Listener() {
+    public BulkProcessor bulkProcessor() {
+        return BulkProcessor.builder((request, bulkListener) -> client.bulkAsync(request, RequestOptions.DEFAULT, bulkListener), new BulkProcessor.Listener() {
             @Override
             public void beforeBulk(long executionId, BulkRequest request) {
                 log.info("Going to execute new bulk composed of {} actions", request.numberOfActions());

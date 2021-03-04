@@ -1,4 +1,4 @@
-package com.demo.BulkInsert.Configuration;
+package com.demo.BulkInsert.configuration;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHost;
@@ -34,30 +34,31 @@ public class ElasticsearchConfig {
     private String protocol;
 
     @Bean
-    public RestHighLevelClient client (){
+    public RestHighLevelClient client() {
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
-        credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username,password));
-
-
+        credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password));
         return new RestHighLevelClient(RestClient.builder(new HttpHost(hostname, port, protocol))
                 .setHttpClientConfigCallback(
                         httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(
                                 credentialsProvider)));
 
     }
+
     @Bean
-    public BulkRequest bulkRequest (){
+    public BulkRequest bulkRequest() {
         return new BulkRequest();
     }
 
     @Bean
-    public ActionListener<BulkResponse> listener (){
-        ActionListener<BulkResponse> listener;
-        return listener = new ActionListener<BulkResponse>() {
+    public ActionListener<BulkResponse> listener() {
+        return new ActionListener<BulkResponse>() {
             @Override
-            public void onResponse(BulkResponse BulkResponse) { }
+            public void onResponse(BulkResponse BulkResponse) {
+            }
+
             @Override
-            public void onFailure(Exception e) { }
+            public void onFailure(Exception e) {
+            }
         };
     }
 }
