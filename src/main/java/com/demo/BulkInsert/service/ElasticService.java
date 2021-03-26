@@ -2,6 +2,7 @@ package com.demo.BulkInsert.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.ListUtils;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.update.UpdateRequest;
@@ -74,20 +75,41 @@ public class ElasticService {
 
     public void bulkRequestIndex(String indexName, List<Map<String, Object>> mapList) {
         BulkRequest bulkRequest = new BulkRequest();
-
-        mapList.forEach(x -> {
+        int[] iarr = {0};
+        if(mapList.size() > 100000){
+            List<List<Map<String, Object>>> mapList2 = ListUtils.partition(mapList, 100000);
+            mapList2.forEach(x ->{
+                BulkRequest bulkRequestPortion = new BulkRequest();
+                x.forEach(y ->{
+                    IndexRequest request = new IndexRequest(indexName, "doc")
+                            .source(objectMapper.convertValue(y, Map.class));
+                    bulkRequestPortion.add(request);
+                });
+                try {
+                    long startTime = System.nanoTime();
+                    log.info("run client bulk " + iarr[0]++);
+                    client.bulk(bulkRequestPortion, RequestOptions.DEFAULT);
+                    long endTime = System.nanoTime();
+                    long duration = (endTime - startTime);
+                    log.info("finished client bulk " +iarr[0]++);
+                    log.info("Bulk Execution Time : " + duration);
+                } catch (IOException e) {
+                    log.error("Bulk IO Exception: {}", e.getMessage());
+                }
+            });
+        }else{
+           mapList.forEach(x -> {
             IndexRequest request = new IndexRequest(indexName, "doc")
                     .source(objectMapper.convertValue(x, Map.class));
-
             bulkRequest.add(request);
         });
-
-        try {
+       try {
             client.bulk(bulkRequest, RequestOptions.DEFAULT);
+
         } catch (IOException e) {
             log.error("Bulk IO Exception: {}", e.getMessage());
+            }
         }
-
     }
 
 }

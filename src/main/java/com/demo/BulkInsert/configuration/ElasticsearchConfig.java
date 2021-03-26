@@ -1,11 +1,13 @@
 package com.demo.BulkInsert.configuration;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.Header;
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.message.BasicHeader;
 import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -37,10 +39,11 @@ public class ElasticsearchConfig {
     public RestHighLevelClient client() {
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password));
+        Header[] headers = new Header[]{new BasicHeader("http.max_content_length", "500mb")};
         return new RestHighLevelClient(RestClient.builder(new HttpHost(hostname, port, protocol))
                 .setHttpClientConfigCallback(
                         httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(
-                                credentialsProvider)));
+                                credentialsProvider)).setMaxRetryTimeoutMillis(900000000).setDefaultHeaders(headers));
 
     }
 

@@ -23,7 +23,7 @@ public class CSVBulkInsertion {
     private ElasticService elasticService;
 
     public void executeCSV(String fileName) {
-        String path = "C:\\Users\\AmirBahar\\My Projects\\projects\\emd-workspace\\poc\\BulkInsertionDemo\\temp\\";
+        String path = "C:\\Users\\HaikalHafizKadar\\Desktop\\BulkInsert\\BulkInsert\\temp\\";
         String fileExecute = path + fileName;
         List<Map<String, Object>> mapList = new ArrayList<>();
         log.info("fileExecute {}", fileExecute);
@@ -60,9 +60,9 @@ public class CSVBulkInsertion {
 
                 mapList.add(maps);
             }
-            log.info("List: {}", mapList);
+            //log.info("List: {}", mapList);
 
-            elasticService.bulkRequestIndex("amir-collection-master2", mapList);
+            elasticService.bulkRequestIndex("haikal-collection-master", mapList);
 
         } catch (Exception e) {
             log.info("Error processing file {}", e.getMessage());
